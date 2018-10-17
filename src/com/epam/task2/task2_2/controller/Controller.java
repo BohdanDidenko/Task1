@@ -20,14 +20,9 @@ public class Controller {
     private Shapes model = new Shapes();
 
     /**
-     * Поле предоставляющие доступ к данным выводимым в консоль пользователю
+     * Поле предоставляющие доступ к данным отображаемым пользователю
      */
     private ShapesView view = new ShapesView();
-
-    /**
-     * Поле принимающие данные введенные пользователем
-     */
-    private Scanner scannerForChoice = new Scanner(System.in);
 
     /**
      * Главный метод класса Controller инициализирующий поле shapes[] принадлежащие модели,
@@ -46,23 +41,23 @@ public class Controller {
         int choice;
 
         while (true) {
-            choice = inputNumber(scannerForChoice);
+            choice = inputNumber(view.getScannerForChoice());
             switch (choice) {
                 case 1: {
                     view.printMessage(String.valueOf
-                            (model.calculateTotalArea(model.getShapes())));
+                            (model.calculateTotalArea()));
                     break;
                 }
                 case 2: {
-                    view.printMessage(model.calculateTotalArea(model.getShapes(), new Circle()));
+                    view.printMessage(model.calculateTotalArea(new Circle()));
                     break;
                 }
                 case 3: {
-                    view.printMessage(model.calculateTotalArea(model.getShapes(), new Triangle()));
+                    view.printMessage(model.calculateTotalArea(new Triangle()));
                     break;
                 }
                 case 4: {
-                    view.printMessage(model.calculateTotalArea(model.getShapes(), new Rectangle()));
+                    view.printMessage(model.calculateTotalArea(new Rectangle()));
                     break;
                 }
                 case 5: {
@@ -80,7 +75,7 @@ public class Controller {
                 }
                 default: {
                     view.printMessage(view.WRONG_INPUT);
-                    scannerForChoice.next();
+                    view.getScannerForChoice().next();
                     continue;
                 }
             }

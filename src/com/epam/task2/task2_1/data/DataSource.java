@@ -22,7 +22,7 @@ public class DataSource {
                         "Wordsworth", 2000, 272, 250.0),
                 new Book("Matilda", "Dahl R.",
                         "Penguin USA", 1999, 240, 550.0),
-                new Book("Alice in Wonderland and Through the Looking Glass", "Carroll, L.",
+                new Book("Alice in Wonderland and Through the Looking Glass", "Carroll L.",
                         "Random House USA", 2016, 234, 380.5),
                 new Book("Create Your Own Monster", "Chuck Whelon",
                         "Harper Collins UK", 2011, 50, 855.5),

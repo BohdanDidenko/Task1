@@ -2,12 +2,19 @@ package com.epam.task2.task2_2.view;
 
 import com.epam.task2.task2_2.model.entity.Shape;
 
+import java.util.Scanner;
+
 /**
  * Класс ShapesView отвечает за отображение данных модели пользователю,
  * реагируя на изменения модели
  */
 
 public class ShapesView {
+
+    /**
+     * Поле принимающие данные введенные пользователем
+     */
+    private Scanner scannerForChoice = new Scanner(System.in);
 
     /**
      * Константа с перечнем допустимых действий для выбора пользователем
@@ -25,6 +32,10 @@ public class ShapesView {
      */
     public static final String WRONG_INPUT = "Wrong input! Repeat please!";
 
+    public Scanner getScannerForChoice() {
+        return scannerForChoice;
+    }
+
     /**
      * Метод отображает в консоль пользователю массив полученных фигур
      *
@@ -32,7 +43,7 @@ public class ShapesView {
      */
     public void printShapes(Shape[] shapes) {
         for (Shape shape : shapes) {
-            System.out.println(shape);
+            shape.draw();
         }
     }
 

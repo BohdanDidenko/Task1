@@ -8,9 +8,6 @@ import com.epam.task2.task2_1.controller.Controller;
 
 public class Main {
 
-    /**
-     * Начало выполнения программы
-     */
     public static void main(String[] args) {
         new Controller().run();
     }

@@ -19,10 +19,11 @@ public class Controller {
     private Books model = new Books();
 
     /**
-     * Поле предоставляющие доступ к данным выводимым в консоль пользователю
+     * Поле предоставляющие доступ к данным отображаемым пользователю
      */
     private BooksView view = new BooksView();
-
+    private Book[] result;
+    private String searchQuery;
 
     /**
      * Главный метод класса Controller инициализирующий поле books[] принадлежащие модели,
@@ -38,66 +39,29 @@ public class Controller {
      * выполнить 1 из 9 операций, или закончить работу программы
      */
     public void selectAction() {
-        Book[] result;
-        String searchQuery;
         int choice;
-        Scanner scannerForChoice = new Scanner(System.in);
-        Scanner scannerForSearchQuery = new Scanner(System.in);
 
         while (true) {
-            choice = inputNumber(scannerForChoice);
+            choice = inputNumber(view.getScannerForChoice());
             switch (choice) {
                 case 1: {
-                    view.printMessage(view.VALUE_TO_SEARCH);
-                    searchQuery = scannerForSearchQuery.nextLine();
-                    result = model.getByTitle(searchQuery);
-                    resultHandler(searchQuery, result);
+                    searchByTitle();
                     break;
                 }
                 case 2: {
-                    view.printMessage(view.VALUE_TO_SEARCH);
-                    searchQuery = scannerForSearchQuery.nextLine();
-                    result = model.getByAuthor(searchQuery);
-                    resultHandler(searchQuery, result);
+                    searchByAuthor();
                     break;
                 }
                 case 3: {
-                    view.printMessage(view.VALUE_TO_SEARCH);
-                    searchQuery = scannerForSearchQuery.nextLine();
-                    result = model.getByPublisher(searchQuery);
-                    resultHandler(searchQuery, result);
+                    searchByPublisher();
                     break;
                 }
                 case 4: {
-                    view.printMessage(view.VALUE_TO_SEARCH);
-                    searchQuery = scannerForSearchQuery.nextLine();
-
-                    try {
-                        result = model.getPublishedBeforeSelectedYearInclusive
-                                (Integer.parseInt(searchQuery));
-                    }
-                    catch (NumberFormatException e){
-                        view.printMessage(view.WRONG_INPUT);
-                        continue;
-                    }
-
-                    resultHandler(searchQuery, result);
+                    searchByPublishedBeforeSelectedYearInclusive();
                     break;
                 }
                 case 5: {
-                    view.printMessage(view.VALUE_TO_SEARCH);
-                    searchQuery = scannerForSearchQuery.nextLine();
-
-                    try {
-                        result = model.getPublishedLaterThanSelectedYear
-                                (Integer.parseInt(searchQuery));
-                    }
-                    catch (NumberFormatException e) {
-                        view.printMessage(view.WRONG_INPUT);
-                        continue;
-                    }
-
-                    resultHandler(searchQuery, result);
+                    searchByPublishedLaterThanSelectedYear();
                     break;
                 }
                 case 6: {
@@ -125,7 +89,7 @@ public class Controller {
                 }
                 default: {
                     view.printMessage(view.WRONG_INPUT);
-                    scannerForChoice.next();
+                    view.getScannerForChoice().next();
                     continue;
                 }
             }
@@ -151,6 +115,61 @@ public class Controller {
                 continue;
             }
         }
+    }
+
+    private void searchByTitle(){
+        view.printMessage(view.VALUE_TO_SEARCH);
+        searchQuery = view.getScannerForSearchQuery().nextLine();
+        result = model.getByTitle(searchQuery);
+        resultHandler(searchQuery, result);
+    }
+
+    private void searchByAuthor(){
+        view.printMessage(view.VALUE_TO_SEARCH);
+        searchQuery = view.getScannerForSearchQuery().nextLine();
+        result = model.getByAuthor(searchQuery);
+        resultHandler(searchQuery, result);
+    }
+
+    private void searchByPublisher(){
+        view.printMessage(view.VALUE_TO_SEARCH);
+        searchQuery = view.getScannerForSearchQuery().nextLine();
+        result = model.getByPublisher(searchQuery);
+        resultHandler(searchQuery, result);
+    }
+
+    private void searchByPublishedBeforeSelectedYearInclusive(){
+        while (true) {
+            view.printMessage(view.VALUE_TO_SEARCH);
+            searchQuery = view.getScannerForSearchQuery().nextLine();
+            try {
+                result = model.getPublishedBeforeSelectedYearInclusive
+                        (Integer.parseInt(searchQuery));
+                break;
+            } catch (NumberFormatException e) {
+                view.printMessage(view.WRONG_INPUT);
+                continue;
+            }
+        }
+        resultHandler(searchQuery, result);
+    }
+
+    private void searchByPublishedLaterThanSelectedYear(){
+        while (true){
+            view.printMessage(view.VALUE_TO_SEARCH);
+            searchQuery = view.getScannerForSearchQuery().nextLine();
+
+            try {
+                result = model.getPublishedLaterThanSelectedYear
+                        (Integer.parseInt(searchQuery));
+                break;
+            }
+            catch (NumberFormatException e) {
+                view.printMessage(view.WRONG_INPUT);
+                continue;
+            }
+        }
+        resultHandler(searchQuery, result);
     }
 
     /**

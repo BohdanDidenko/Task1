@@ -1,5 +1,7 @@
 package com.epam.task2.task2_2.model.entity;
 
+import java.text.DecimalFormat;
+
 /**
  * Класс описывающий строение фигуры
  */
@@ -57,7 +59,10 @@ public abstract class Shape implements Drawable{
      */
     @Override
     public void draw() {
-        System.out.println("This is " + this.getClass().getSimpleName());
+        System.out.println("This is " + this.getClass().getSimpleName() + "{" +
+                "shapeColor='" + shapeColor + '\'' + " " +
+                "Area=" + new DecimalFormat("#0.00").format(this.calcArea()) + '\'' +
+                '}');
     }
 
     /**
@@ -67,7 +72,7 @@ public abstract class Shape implements Drawable{
      */
     @Override
     public String toString() {
-        return "Shape{" +
+        return this.getClass().getSimpleName() + "{" +
                 "shapeColor='" + shapeColor + '\'' +
                 '}';
     }

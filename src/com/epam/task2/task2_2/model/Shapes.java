@@ -76,10 +76,9 @@ public class Shapes {
      * Метод суммирует и возвращает общую площадь всех фигур
      * полученных в массиве shapes
      *
-     * @param shapes - массив фигур для подсчета их площади
      * @return result - полученный результат
      */
-    public String calculateTotalArea(Shape[] shapes){
+    public String calculateTotalArea(){
         double result = 0;
         for (int i = 0; i < shapes.length; i++) {
             result += shapes[i].calcArea();
@@ -91,11 +90,10 @@ public class Shapes {
      * Метод суммирует и возвращает общую площадь фигур определенного
      * типа полученного в параметрах метода
      *
-     * @param shapes - массив фигур
      * @param shape - тип конкретной фигуры
      * @return result - полученный результат
      */
-    public String calculateTotalArea(Shape[] shapes, Shape shape){
+    public String calculateTotalArea(Shape shape){
         double result = 0;
         for (int i = 0; i < shapes.length; i++) {
             if(shapes[i].getClass() == shape.getClass())

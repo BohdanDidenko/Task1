@@ -2,12 +2,17 @@ package com.epam.task2.task2_1.view;
 
 import com.epam.task2.task2_1.model.enity.Book;
 
+import java.util.Scanner;
+
 /**
  * Класс BooksView отвечает за отображение данных модели пользователю,
  * реагируя на изменения модели
  */
 
 public class BooksView {
+
+    private Scanner scannerForChoice = new Scanner(System.in);
+    private Scanner scannerForSearchQuery = new Scanner(System.in);
 
     /**
      * Константа с перечнем допустимых действий для выбора пользователем
@@ -38,6 +43,14 @@ public class BooksView {
      * Константа уведомляющая пользователя о том, что результат не найден
      */
     public static final String NO_BOOKS = "No result found for - ";
+
+    public Scanner getScannerForChoice() {
+        return scannerForChoice;
+    }
+
+    public Scanner getScannerForSearchQuery() {
+        return scannerForSearchQuery;
+    }
 
     /**
      * Метод отображает в консоль пользователю сообщение и

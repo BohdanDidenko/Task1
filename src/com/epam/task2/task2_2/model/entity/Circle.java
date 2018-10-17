@@ -1,7 +1,5 @@
 package com.epam.task2.task2_2.model.entity;
 
-import java.text.DecimalFormat;
-
 /**
  * Класс описывающий строение круга
  */
@@ -64,9 +62,8 @@ public class Circle extends Shape {
      */
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + "{" +
-                "Color='" + this.getShapeColor() + '\'' +
-                "Area=" + new DecimalFormat("#0.00").format(this.calcArea()) + '\'' +
+        return super.toString() +
+                "Area=" + radius + '\'' +
                 '}';
     }
 }
