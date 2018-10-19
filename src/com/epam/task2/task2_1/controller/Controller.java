@@ -38,7 +38,7 @@ public class Controller {
      * Метод отвечает за взаимодействие с пользователем и предлагает ему
      * выполнить 1 из 9 операций, или закончить работу программы
      */
-    public void selectAction() {
+    private void selectAction() {
         int choice;
 
         while (true) {
@@ -90,7 +90,6 @@ public class Controller {
                 default: {
                     view.printMessage(view.WRONG_INPUT);
                     view.getScannerForChoice().next();
-                    continue;
                 }
             }
         }
@@ -112,7 +111,6 @@ public class Controller {
             else {
                 view.printMessage(view.WRONG_INPUT);
                 scannerForChoice.next();
-                continue;
             }
         }
     }
@@ -148,7 +146,6 @@ public class Controller {
                 break;
             } catch (NumberFormatException e) {
                 view.printMessage(view.WRONG_INPUT);
-                continue;
             }
         }
         resultHandler(searchQuery, result);
@@ -166,7 +163,6 @@ public class Controller {
             }
             catch (NumberFormatException e) {
                 view.printMessage(view.WRONG_INPUT);
-                continue;
             }
         }
         resultHandler(searchQuery, result);

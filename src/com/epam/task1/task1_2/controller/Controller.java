@@ -14,7 +14,7 @@ public class Controller {
         view.print(model.searchPerfectNumbers(enterNumber()));
     }
 
-    public int enterNumber() {
+    private int enterNumber() {
         int border;
         while (true) {
             view.printMessage(view.ENTER_BORDER);
@@ -23,7 +23,6 @@ public class Controller {
             } else {
                 view.printMessage(view.WRONG_INPUT);
                 scanner.next();
-                continue;
             }
         }
     }

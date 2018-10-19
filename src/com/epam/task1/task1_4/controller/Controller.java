@@ -29,7 +29,6 @@ public class Controller {
             } else {
                 view.printMessage(view.WRONG_INPUT);
                 scanner.next();
-                continue;
             }
         }
     }
@@ -54,7 +53,6 @@ public class Controller {
                 default: {
                     view.printMessage(view.WRONG_INPUT);
                     scanner.next();
-                    continue;
                 }
             }
         }

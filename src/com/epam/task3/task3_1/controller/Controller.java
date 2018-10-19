@@ -5,7 +5,6 @@ import com.epam.task3.task3_1.model.GameRoom;
 import com.epam.task3.task3_1.model.entity.KidsToy;
 import com.epam.task3.task3_1.view.ToysView;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -65,7 +64,6 @@ public class Controller {
                 default: {
                     view.printMessage(view.WRONG_INPUT);
                     view.getScanner().next();
-                    continue;
                 }
             }
         }
@@ -80,7 +78,6 @@ public class Controller {
             else {
                 view.printMessage(view.WRONG_INPUT);
                 scanner.next();
-                continue;
             }
         }
     }
@@ -154,13 +151,11 @@ public class Controller {
                     default: {
                         view.printMessage(view.WRONG_INPUT);
                         view.getScanner().next();
-                        continue;
                     }
                 }
             }
             catch(NumberFormatException | InputMismatchException e){
                 view.printMessage(view.WRONG_INPUT);
-                continue;
             }
         }
     }

@@ -1,9 +1,6 @@
 package com.epam.task3.task3_2.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Store {
     private String storeName;
@@ -40,10 +37,11 @@ public class Store {
 
     public void deleteDepartmentByName(String departmentNameForDelete){
         if(departmentNameForDelete == null && listDepartments.size() == 0) return;
-        List<Department> listForDelete = new ArrayList<>();
 
-        for (Department department : listDepartments) {
-            if(department.departmentName.equals(departmentNameForDelete)) listDepartments.remove(department);
+        Iterator<Department> iterator = listDepartments.iterator();
+        while (iterator.hasNext()){
+            Department department = iterator.next();
+            if(department.departmentName.equals(departmentNameForDelete)) iterator.remove();
         }
     }
 

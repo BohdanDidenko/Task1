@@ -64,7 +64,6 @@ public class Controller {
                 default: {
                     view.printMessage(view.WRONG_INPUT);
                     view.getScanner().next();
-                    continue;
                 }
             }
         }
@@ -79,7 +78,6 @@ public class Controller {
             else {
                 view.printMessage(view.WRONG_INPUT);
                 scanner.next();
-                continue;
             }
         }
     }
@@ -100,22 +98,22 @@ public class Controller {
         view.getScanner().nextLine();
         departmentName = view.getScanner().nextLine();
 
-//        if(!isExistDepartment(departmentName)) {
-//            view.printMessage(view.DEPARTMENT_NOT_EXIST);
-//            return;
-//        }
+        if(!isExistDepartment(departmentName)){
+            view.printMessage(view.ENTER_TYPE_OF_PRODUCTS);
+            typeOfProducts = view.getScanner().nextLine();
 
-        view.printMessage(view.ENTER_TYPE_OF_PRODUCTS);
-        typeOfProducts = view.getScanner().nextLine();
+            view.printMessage(view.ENTER_SERVICE);
+            service = view.getScanner().nextLine();
 
-        view.printMessage(view.ENTER_SERVICE);
-        service = view.getScanner().nextLine();
+            view.printMessage(view.ENTER_LOCATION);
+            location = view.getScanner().nextLine();
 
-        view.printMessage(view.ENTER_LOCATION);
-        location = view.getScanner().nextLine();
-
-        model.getListDepartments().
-                add(model.creatDepartment(departmentName, typeOfProducts, service, location));
+            model.getListDepartments().
+                    add(model.creatDepartment(departmentName, typeOfProducts, service, location));
+        }
+        else{
+            view.printMessage(view.DEPARTMENT_EXISTS);
+        }
     }
 
     private void deleteDepartmentByName(){
@@ -125,13 +123,12 @@ public class Controller {
         view.getScanner().nextLine();
         departmentNameForDelete = view.getScanner().nextLine();
 
-        //todo
-//        if(!model.getListDepartments().contains(departmentName)) {
-//            view.printMessage(view.DEPARTMENT_NOT_EXIST);
-//            return;
-//        }
-
+        if(isExistDepartment(departmentNameForDelete)){
         model.deleteDepartmentByName(departmentNameForDelete);
+        }
+        else{
+            view.printMessage(view.DEPARTMENT_NOT_EXISTS);
+        }
     }
 
     private void deliveryProductsInDepartment(){
@@ -142,16 +139,15 @@ public class Controller {
         view.getScanner().nextLine();
         departmentName = view.getScanner().nextLine();
 
-        //todo
-//        if(!model.getListDepartments().contains(departmentName)) {
-//            view.printMessage(view.DEPARTMENT_NOT_EXIST);
-//            return;
-//        }
+        if(isExistDepartment(departmentName)) {
+            view.printMessage(view.ENTER_DELIVERY_PRODUCTS);
+            products = view.getScanner().nextLine();
 
-        view.printMessage(view.ENTER_DELIVERY_PRODUCTS);
-        products = view.getScanner().nextLine();
-
-        model.deliveryProducts(departmentName, products.split(" "));
+            model.deliveryProducts(departmentName, products.split(" "));
+        }
+        else {
+            view.printMessage(view.DEPARTMENT_NOT_EXISTS);
+        }
     }
 
     private boolean isExistDepartment(String departmentName){

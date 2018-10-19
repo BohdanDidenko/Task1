@@ -3,7 +3,7 @@ package com.epam.task3.task3_2.view;
 import java.util.List;
 import java.util.Scanner;
 
-public class StoreView {
+public class StoreView<T> {
     private Scanner scanner = new Scanner(System.in);
 
     public static final String SELECT_AN_ACTION = "Select an action: " + "\n" +
@@ -22,23 +22,21 @@ public class StoreView {
 
     public static final String NO_RESULT = "No results were found for your search";
 
-    /**
-     * Константы запрашивающая у пользователя данные для поиска
-     */
     public static final String ENTER_STORE_NAME = "Please enter a store name";
     public static final String ENTER_DEPARTMENT_NAME = "Please enter a department name";
     public static final String ENTER_TYPE_OF_PRODUCTS = "Please enter a type of products";
     public static final String ENTER_SERVICE = "Please enter a service";
     public static final String ENTER_LOCATION = "Please enter a location";
     public static final String ENTER_DELIVERY_PRODUCTS = "Please enter a delivery products split space";
-    public static final String DEPARTMENT_NOT_EXIST = "There is no department with that name.";
+    public static final String DEPARTMENT_NOT_EXISTS = "There is no department with that name.";
+    public static final String DEPARTMENT_EXISTS = "Department with that name already exists.";
 
     public Scanner getScanner() {
         return scanner;
     }
 
-    public <E>void printList(List<E> list) {
-        for (E element : list) {
+    public <T>void printList(List<T> list) {
+        for (T element : list) {
             System.out.println(element);
         }
     }

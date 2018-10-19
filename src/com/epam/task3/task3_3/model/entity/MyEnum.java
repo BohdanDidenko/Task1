@@ -1,4 +1,4 @@
-package com.epam.task3.task3_3;
+package com.epam.task3.task3_3.model.entity;
 
 import java.io.*;
 
@@ -10,36 +10,22 @@ import java.io.*;
  * @see java.lang.Enum
  */
 
-public class MyEnum<E extends MyEnum<E>> implements Comparable<E>, Serializable{
+public abstract class MyEnum<E extends MyEnum<E>> implements Comparable<E>, Serializable{
     private final String name;
-
+    private static int nextOrdinal = 0;
     private final int ordinal;
 
-    public MyEnum(String name, int ordinal) {
+    public MyEnum(String name) {
         this.name = name;
-        this.ordinal = ordinal;
+        this.ordinal = nextOrdinal++;
     }
 
     public String getName() {
-        return name;
+        return name.toUpperCase();
     }
 
     public int getOrdinal() {
         return ordinal;
-    }
-
-    public <T extends Enum<T>> T valueOf(Class<T> enumType, String name) {
-
-        //todo
-
-//        T result = enumType.enumConstantDirectory().get(name);
-//        if (result != null)
-//            return result;
-//        if (name == null)
-//            throw new NullPointerException("Name is null");
-//        throw new IllegalArgumentException(
-//                "No enum constant " + enumType.getCanonicalName() + "." + name);
-        return null;
     }
 
     @Override
@@ -49,7 +35,7 @@ public class MyEnum<E extends MyEnum<E>> implements Comparable<E>, Serializable{
 
     @Override
     public String toString() {
-        return name;
+        return name.toUpperCase();
     }
 
     @Override
@@ -74,9 +60,6 @@ public class MyEnum<E extends MyEnum<E>> implements Comparable<E>, Serializable{
     protected Object clone() throws CloneNotSupportedException {
         throw  new CloneNotSupportedException();
     }
-
-
-
 
     /**
      * prevent default deserialization

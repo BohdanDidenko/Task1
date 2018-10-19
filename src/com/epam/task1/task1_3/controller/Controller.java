@@ -14,7 +14,7 @@ public class Controller {
         view.printPyramid(model.buildPyramid(enterHeight()));
     }
 
-    public int enterHeight() {
+    private int enterHeight() {
         int height;
         while (true) {
             view.printMessage(view.ENTER_HEIGHT_PYRAMID);
@@ -23,7 +23,6 @@ public class Controller {
             } else {
                 view.printMessage(view.WRONG_INPUT);
                 scanner.next();
-                continue;
             }
         }
     }
