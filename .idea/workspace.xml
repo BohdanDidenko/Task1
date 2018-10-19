@@ -5,37 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5a59c4-f32e-456e-b4e8-3e555a892df0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_3/controller/Controller.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_3/model/Suit.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_3/view/SuitView.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_1/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_1/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_2/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_2/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_3/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_3/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_4/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_4/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/controller/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/data/DataSource.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/model/Store$Department.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/model/Store$Department.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/model/Store.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/model/Store.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/view/StoreView.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/view/StoreView.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/Main.class" afterPath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/MyEnum.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task1/task1_1/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task1/task1_1/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task1/task1_2/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task1/task1_2/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task1/task1_3/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task1/task1_3/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task1/task1_4/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task1/task1_4/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task2/task2_1/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task2/task2_1/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task2/task2_2/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task2/task2_2/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_1/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_1/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_2/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_2/controller/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_2/data/DataSource.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_2/model/Store.java" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_2/model/Store.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_2/view/StoreView.java" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_2/view/StoreView.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_3/Main.java" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_3/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/task3/task3_3/MyEnum.java" afterPath="$PROJECT_DIR$/src/com/epam/task3/task3_3/model/entity/MyEnum.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/.idea/src.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_1/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_1/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_1/model/Model.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_1/view/View.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_2/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_2/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_2/model/Model.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_2/view/View.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_3/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_3/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_3/model/Model.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_3/view/View.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_4/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_4/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_4/model/Model.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task1/task1_4/view/View.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/data/DataSource.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/model/Books$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/model/Books$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/model/Books$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/model/Books$4.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/model/Books.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/model/enity/Book.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_1/view/BooksView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/data/DataSource.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/Shapes$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/Shapes$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/Shapes.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/entity/Circle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/entity/Drawable.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/entity/Rectangle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/entity/Shape.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/model/entity/Triangle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task2/task2_2/view/ShapesView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/data/DataSource.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/GameRoom.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/Car.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/Constructor.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/Doll.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/KidsToy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/Puzzles.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/Toy.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/model/entity/ToyWeaponSet.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_1/view/ToysView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/model/Store$Department.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/model/Store.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_2/view/StoreView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/controller/Controller.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/model/Suit.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/model/entity/MyEnum.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/EPAMUniversity/com/epam/task3/task3_3/view/SuitView.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/src.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,7 +166,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/epam/task3/task3_3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
                 <element signature="e#150#151#0" expanded="true" />
                 <element signature="e#188#189#0" expanded="true" />
@@ -296,110 +336,6 @@
               <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="epam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_2" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_2" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_3" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_3" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_3" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPAMUniversity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="epam" type="462c0819:PsiDirectoryNode" />
-              <item name="task3" type="462c0819:PsiDirectoryNode" />
-              <item name="task3_3" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EPAMUniversity" type="b2602c69:ProjectViewProjectNode" />
@@ -722,12 +658,12 @@
       <workItem from="1539788208856" duration="4907000" />
       <workItem from="1539881263399" duration="1078000" />
       <workItem from="1539888989690" duration="2283000" />
-      <workItem from="1539937922362" duration="12829000" />
+      <workItem from="1539937922362" duration="12990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179471000" />
+    <option name="totallyTimeSpent" value="179632000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1097,7 +1033,7 @@
         <state relative-caret-position="414">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="188" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,8 +1043,8 @@
         <state relative-caret-position="171">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="83" />
           <folding>
-            <element signature="e#1938#1939#0" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1981#1982#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,7 +1128,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/epam/task3/task3_3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#150#151#0" expanded="true" />
             <element signature="e#188#189#0" expanded="true" />
