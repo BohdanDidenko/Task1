@@ -52,7 +52,7 @@ public class Circle extends Shape {
      */
     @Override
     public double calcArea() {
-        return Math.PI * 2 * radius;
+        return Math.PI * (radius * radius);
     }
 
     /**

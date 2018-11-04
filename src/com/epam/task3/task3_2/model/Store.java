@@ -161,31 +161,4 @@ public class Store {
             return result;
         }
     }
-
-    @Override
-    public String toString() {
-        return getClass().getSimpleName() + "{" +
-                "storeName='" + storeName + '\'' +
-                ", listDepartments=" + listDepartments +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Store)) return false;
-
-        Store store = (Store) o;
-
-        if (getStoreName() != null ? !getStoreName().equals(store.getStoreName()) : store.getStoreName() != null)
-            return false;
-        return getListDepartments() != null ? getListDepartments().equals(store.getListDepartments()) : store.getListDepartments() == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getStoreName() != null ? getStoreName().hashCode() : 0;
-        result = 31 * result + (getListDepartments() != null ? getListDepartments().hashCode() : 0);
-        return result;
-    }
 }
