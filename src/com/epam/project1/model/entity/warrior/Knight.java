@@ -5,6 +5,9 @@ import com.epam.project1.model.entity.Human;
 import com.epam.project1.model.entity.armor.ChestArmor;
 import com.epam.project1.model.entity.armor.Helmet;
 import com.epam.project1.model.entity.armor.Shield;
+import com.epam.project1.model.entity.weapon.Dagger;
+import com.epam.project1.model.entity.weapon.Spear;
+import com.epam.project1.model.entity.weapon.Sword;
 import com.epam.project1.model.entity.weapon.Weapon;
 
 import java.util.LinkedList;
@@ -69,9 +72,9 @@ public class Knight extends Human {
         return inventory;
     }
 
-    public List<Ammunition> getInventory(Ammunition ammunition) {
+    public <T>List<Ammunition> getInventory(Class<T> type) {
         List<Ammunition> result = new LinkedList<>();
-        if(ammunition instanceof Weapon) {
+        if(type == Dagger.class || type == Spear.class || type == Sword.class) {
             for (Ammunition thing : inventory) {
                 if (thing instanceof Weapon)
                     result.add(thing);
@@ -79,7 +82,7 @@ public class Knight extends Human {
         }
         else {
             for (Ammunition thing : inventory) {
-                if (thing.getClass() == ammunition.getClass())
+                if (thing.getClass() == type)
                     result.add(thing);
             }
         }

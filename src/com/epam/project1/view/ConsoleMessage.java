@@ -1,5 +1,8 @@
 package com.epam.project1.view;
 
+import java.util.Arrays;
+import java.util.List;
+
 public interface ConsoleMessage {
     String MAIN_MENU = "Select an action: " + "\n" +
             "1 - Show a knight" + "\n" +
@@ -20,16 +23,16 @@ public interface ConsoleMessage {
             "5 - Come back";
 
     String AMMUNITION_MENU = "Select an action with ammunition" + "\n" +
-            "1 - Remove and put into inventory" + "\n" +
-            "2 - Take from inventory" + "\n" +
-            "3 - Buy on the market" + "\n" +
-            "4 - Come back";
+            "1 - Take from inventory" + "\n" +
+            "2 - Buy on the market";
 
-    String INVENTORY_MENU = "Select an action" + "\n" +
-            "1 - Take first thing" + "\n" +
-            "2 - Take second thing" + "\n" +
-            "3 - Take third thing" + "\n" +
-            "4 - Come back";
+    List<?> INVENTORY_MENU = Arrays.asList(
+            "1 - Take first thing",
+            "2 - Take second thing",
+            "3 - Take third thing");
+
+    String MIN_PRICE = "Please enter a minimum price.";
+    String MAX_PRICE = "Please enter a maximum price.";
 
     String WRONG_INPUT = "Wrong input! Repeat please!";
     String NO_RESULT = "No results were found for your search";

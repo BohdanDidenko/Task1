@@ -6,6 +6,9 @@ import com.epam.project1.model.entity.armor.ChestArmor;
 import com.epam.project1.model.entity.armor.Helmet;
 import com.epam.project1.model.entity.armor.Shield;
 import com.epam.project1.model.entity.warrior.Knight;
+import com.epam.project1.model.entity.weapon.Dagger;
+import com.epam.project1.model.entity.weapon.Spear;
+import com.epam.project1.model.entity.weapon.Sword;
 import com.epam.project1.model.entity.weapon.Weapon;
 import java.io.*;
 import java.util.*;
@@ -49,25 +52,25 @@ public class KnightModel implements Model {
     }
 
     @Override
-    public void equipKnight(Ammunition oldAmmunition, Ammunition newAmmunition) {
-        if(oldAmmunition == null){
+    public <T>void equipKnight(Class<T> type, Ammunition newAmmunition) {
+/*        if(oldAmmunition == null){
         }
-        else if (oldAmmunition.getClass() == ChestArmor.class) {
+        else */if (type == ChestArmor.class) {
             if (knight.getChestArmor() != null) {
                 knight.getInventory().add(knight.getChestArmor());
             }
             knight.setChestArmor((ChestArmor) newAmmunition);
-        } else if (oldAmmunition.getClass() == Helmet.class) {
+        } else if (type == Helmet.class) {
             if (knight.getHelmet() != null) {
                 knight.getInventory().add(knight.getHelmet());
             }
             knight.setHelmet((Helmet) newAmmunition);
-        } else if (oldAmmunition.getClass() == Shield.class) {
+        } else if (type == Shield.class) {
             if (knight.getShield() != null) {
                 knight.getInventory().add(knight.getShield());
             }
             knight.setShield((Shield) newAmmunition);
-        } else if (oldAmmunition instanceof Weapon) {
+        } else if (type == Dagger.class || type == Spear.class || type == Sword.class) {
             if (knight.getWeapon() != null) {
                 knight.getInventory().add(knight.getWeapon());
             }
@@ -79,18 +82,18 @@ public class KnightModel implements Model {
     }
 
     @Override
-    public List<Ammunition> goToMarket(Ammunition ammunition, int count){
+    public <T>List<Ammunition> goToMarket(Class<T> type, int count){
         List<Ammunition> result = new LinkedList<>();
-        if(ammunition.getClass() == ChestArmor.class){
+        if(type == ChestArmor.class){
             return createChestArmor(result, count);
         }
-        else if(ammunition.getClass() == Helmet.class){
+        else if(type == Helmet.class){
             return createHelmet(result, count);
         }
-        else if(ammunition.getClass() == Shield.class){
+        else if(type == Shield.class){
             return createShield(result, count);
         }
-        else if(ammunition instanceof Weapon){
+        else if(type == Dagger.class || type == Spear.class || type == Sword.class){
             return createWeapon(result, count);
         }
         return result;

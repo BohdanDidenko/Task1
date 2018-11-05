@@ -7,4 +7,5 @@ public interface View {
     <T>T getRequestFromUser();
     <T>void showMessage(T message);
     <E>void showList(List<E> list);
+    <E>void showList(List<E> list, int count);
 }

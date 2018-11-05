@@ -11,9 +11,9 @@ public interface Model {
     Knight loadKnight();
     Knight getKnight();
     void saveKnight();
-    void equipKnight(Ammunition knightAmmunition, Ammunition newAmmunition);
+    <T>void equipKnight(Class<T> type, Ammunition newAmmunition);
 //    void putAmmunitionInInventory();
-    List<Ammunition> goToMarket(Ammunition ammunition, int count);
+    <T>List<Ammunition> goToMarket(Class<T> type, int count);
     String calculateTotalCostOfAmmunition();
     void sortAmmunition(Comparator<Ammunition> comparator);
     List<Ammunition> findItemsOfAmmunitionInPriceDiapason(double lowerPrice, double topPrice);

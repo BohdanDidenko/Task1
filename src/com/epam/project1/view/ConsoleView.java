@@ -27,4 +27,11 @@ public class ConsoleView implements View, ConsoleMessage {
             System.out.println(element);
         }
     }
+
+    @Override
+    public <E> void showList(List<E> list, int count) {
+        for (int i = 0; i < count; i++) {
+            System.out.println(list.get(i));
+        }
+    }
 }
