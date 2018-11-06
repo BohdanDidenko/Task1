@@ -1,16 +1,18 @@
 package com.epam.project1.controller;
 
-import com.epam.project1.model.KnightModel;
+import com.epam.project1.dao.Dao;
+import com.epam.project1.dao.KnightDao;
+import com.epam.project1.model.warrior.Knight;
+import com.epam.project1.service.KnightService;
+import com.epam.project1.service.Service;
 import com.epam.project1.view.ConsoleView;
 import java.util.List;
 
-public class Controller {
-    protected static KnightModel model = new KnightModel();
+public abstract class Controller {
     protected static ConsoleView view = new ConsoleView();
-
-    public void run(){
-        new MainMenuController().mainMenu();
-    }
+    protected static Knight model;
+    protected static Service service = new KnightService();
+    protected static Dao dao = new KnightDao();
 
     protected  <E, T>E getUserChoice(E[] elements, T message){
         while (true) {

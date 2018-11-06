@@ -16,23 +16,23 @@ public class KnightMenuController extends Controller{
             KnightMenu choice = getUserChoice(KnightMenu.values(), view.KNIGHT_MENU);
             switch (choice) {
                 case CHEST_ARMOR_OF_KNIGHT: {
-                    model.equipKnight(model.getKnight().getChestArmor().getClass(),
-                            inventoryMenuController.inventoryOfKnight(model.getKnight().getChestArmor().getClass()));
+                    service.equipKnight(model, model.getChestArmor().getClass(),
+                            inventoryMenuController.inventoryOfKnight(model.getChestArmor().getClass()));
                     break;
                 }
                 case HELMET_OF_KNIGHT: {
-                    model.equipKnight(model.getKnight().getHelmet().getClass(),
-                            inventoryMenuController.inventoryOfKnight(model.getKnight().getHelmet().getClass()));
+                    service.equipKnight(model, model.getHelmet().getClass(),
+                            inventoryMenuController.inventoryOfKnight(model.getHelmet().getClass()));
                     break;
                 }
                 case SHIELD_OF_KNIGHT: {
-                    model.equipKnight(model.getKnight().getShield().getClass(),
-                            inventoryMenuController.inventoryOfKnight(model.getKnight().getShield().getClass()));
+                    service.equipKnight(model, model.getShield().getClass(),
+                            inventoryMenuController.inventoryOfKnight(model.getShield().getClass()));
                     break;
                 }
                 case WEAPON_OF_KNIGH: {
-                    model.equipKnight(model.getKnight().getWeapon().getClass(),
-                            inventoryMenuController.inventoryOfKnight(model.getKnight().getWeapon().getClass()));
+                    service.equipKnight(model, model.getWeapon().getClass(),
+                            inventoryMenuController.inventoryOfKnight(model.getWeapon().getClass()));
                     break;
                 }
                 case COME_BACK: { return; }

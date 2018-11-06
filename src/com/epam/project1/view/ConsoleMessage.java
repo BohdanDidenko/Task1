@@ -34,6 +34,7 @@ public interface ConsoleMessage {
     String MIN_PRICE = "Please enter a minimum price.";
     String MAX_PRICE = "Please enter a maximum price.";
 
+    String EXCEPTION = "Upss...Something must have gone wrong! =(";
     String WRONG_INPUT = "Wrong input! Repeat please!";
     String NO_RESULT = "No results were found for your search";
 }
