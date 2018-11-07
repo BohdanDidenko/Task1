@@ -59,7 +59,7 @@ public abstract class Shape implements Drawable{
      */
     @Override
     public void draw() {
-        System.out.println("This is " + this.getClass().getSimpleName() + "{" +
+        System.out.println("This is " + this.toString() + "{" +
                 "shapeColor='" + shapeColor + '\'' + " " +
                 "Area=" + new DecimalFormat("#0.00").format(this.calcArea()) + '\'' +
                 '}');

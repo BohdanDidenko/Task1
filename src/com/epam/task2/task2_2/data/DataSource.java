@@ -1,9 +1,9 @@
 package com.epam.task2.task2_2.data;
 
-import com.epam.task2.task2_2.model.entity.Circle;
-import com.epam.task2.task2_2.model.entity.Rectangle;
+import com.epam.task2.task2_2.model.Circle;
+import com.epam.task2.task2_2.model.Rectangle;
 import com.epam.task2.task2_2.model.entity.Shape;
-import com.epam.task2.task2_2.model.entity.Triangle;
+import com.epam.task2.task2_2.model.Triangle;
 
 /**
  * Класс предоставляет массив объектов типа Shape

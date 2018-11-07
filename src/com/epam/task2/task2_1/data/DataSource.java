@@ -1,6 +1,6 @@
 package com.epam.task2.task2_1.data;
 
-import com.epam.task2.task2_1.model.enity.Book;
+import com.epam.task2.task2_1.model.Book;
 
 /**
  * Класс предоставляет массив объектов типа Book

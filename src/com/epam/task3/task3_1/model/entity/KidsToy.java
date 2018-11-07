@@ -1,6 +1,6 @@
 package com.epam.task3.task3_1.model.entity;
 
-public class KidsToy extends Toy{
+public abstract class KidsToy extends Toy{
     private String ageGroup;
 
     public KidsToy() {

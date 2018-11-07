@@ -3,68 +3,41 @@ package com.epam.task3.task3_1.controller;
 import com.epam.task3.task3_1.data.DataSource;
 import com.epam.task3.task3_1.model.GameRoom;
 import com.epam.task3.task3_1.model.entity.KidsToy;
-import com.epam.task3.task3_1.view.ToysView;
+import com.epam.task3.task3_1.service.GameRoomService;
 import com.epam.task3.task3_1.service.Service;
+import com.epam.task3.task3_1.view.ConsoleView;
 
-public class Controller {
-    private GameRoom<KidsToy> model = new GameRoom<>();
-    private ToysView view = new ToysView();
-    private Service service = new Service(model, view);
+import java.util.List;
 
-    public void run(){
-        model.setKidsToys(DataSource.getKidsToys());
-        selectAction();
-    }
+public abstract class Controller {
+    protected static ConsoleView view = new ConsoleView();
+    protected static GameRoom<KidsToy> model = new GameRoom<KidsToy>(DataSource.getKidsToys());
+    protected static Service service = new GameRoomService();
 
-    private void selectAction() {
+    protected  <E, T>E getUserChoice(E[] elements, T message){
         while (true) {
-            int choice = service.inputNumber(view.SELECT_AN_ACTION , view.getScanner());
-            switch (choice) {
-                case 1: {
-                    service.resultHandler(model.getKidsToys());
-                    break;
-                }
-                case 2: {
-                   service.resultHandler(model.calculateTotalValueAllKidsToy());
-                    break;
-                }
-                case 3: {
-                    service.resultHandler(service.searchBySpecifiedCriteria(model.getKidsToys()));
-                    break;
-                }
-                case 4: {
-                    service.sortByTitle(model.getKidsToys());
-                    service.resultHandler(model.getKidsToys());
-                    break;
-                }
-                case 5: {
-                    service.sortByManufacturer(model.getKidsToys());
-                    service.resultHandler(model.getKidsToys());
-                    break;
-                }
-                case 6: {
-                    service.sortByMaterial(model.getKidsToys());
-                    service.resultHandler(model.getKidsToys());
-                    break;
-                }
-                case 7: {
-                    service.sortByPrice(model.getKidsToys());
-                    service.resultHandler(model.getKidsToys());
-                    break;
-                }
-                case 8: {
-                    service.sortByWarrantyDays(model.getKidsToys());
-                    service.resultHandler(model.getKidsToys());
-                    break;
-                }
-                case 0: {
-                    return;
-                }
-                default: {
-                    view.printMessage(view.WRONG_INPUT);
-                    view.getScanner().next();
-                }
+            view.showMessage(message);
+            if (view.getRequestFromUser().hasNextInt()) {
+                return elements[view.getRequestFromUser().nextInt() - 1];
+            }
+            else {
+                view.showMessage(view.WRONG_INPUT);
+                view.getRequestFromUser().next();
             }
         }
+    }
+
+    protected <T>void resultHandler(T result) {
+        if (result != null && !result.equals(""))
+            view.showMessage(result);
+        else
+            view.showMessage(view.NO_RESULT);
+    }
+
+    protected <E>void resultHandler(List<E> result) {
+        if (result.size() > 0)
+            view.showList(result);
+        else
+            view.showMessage(view.NO_RESULT);
     }
 }
