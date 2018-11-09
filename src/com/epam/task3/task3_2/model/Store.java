@@ -45,19 +45,6 @@ public class Store {
         }
     }
 
-    public void redistributionDepartment(Comparator<Department> comparator){
-        Collections.sort(listDepartments, comparator);
-    }
-
-    public void deliveryProducts(String departmentName, String ... products){
-        if(departmentName == null && products.length == 0) return;
-
-        for (Department department : listDepartments) {
-            if(department.departmentName.equals(departmentName))
-                department.setListOfProducts(products);
-        }
-    }
-
     public class Department{
         private String departmentName;
         private String typeOfProducts;
@@ -127,7 +114,7 @@ public class Store {
             return getClass().getSimpleName() + "{" +
                     "departmentName='" + departmentName + '\'' +
                     ", typeOfProducts='" + typeOfProducts + '\'' +
-                    ", service='" + service + '\'' +
+                    ", suitService='" + service + '\'' +
                     ", location='" + location + '\'' +
                     ", listOfProducts=" + listOfProducts +
                     '}';

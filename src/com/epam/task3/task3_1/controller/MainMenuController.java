@@ -19,7 +19,6 @@ public class MainMenuController extends Controller {
         EXIT
     }
 
-
     protected void mainMenu() {
         while (true) {
             try {

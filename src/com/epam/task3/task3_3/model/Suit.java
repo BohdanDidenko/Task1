@@ -24,18 +24,4 @@ public class Suit extends MyEnum<Suit> {
          }
         return null;
     }
-
-    public static int getEnumOrdinalByName(String name){
-        for (Suit value : VALUES) {
-            if (value.getName().equals(name)) return value.getOrdinal();
-        }
-        return new Integer(null);
-    }
-
-    public static String getEnumNameByOrdinal(int ordinal){
-        for (Suit value : VALUES) {
-            if (value.getOrdinal() == ordinal) return value.getName();
-        }
-        return null;
-    }
 }

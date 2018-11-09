@@ -1,49 +1,46 @@
 package com.epam.task3.task3_3.controller;
 
-import com.epam.task3.task3_3.model.Suit;
-import com.epam.task3.task3_3.service.Service;
-import com.epam.task3.task3_3.view.SuitView;
+import com.epam.task3.task3_3.view.ConsoleView;
+import com.epam.task3.task3_3.service.SuitService;
 
-public class Controller {
-    private SuitView view = new SuitView();
-    private Service service = new Service(view);
+import java.util.Arrays;
+import java.util.List;
 
-    public void run(){
-        selectAction();
-    }
+public abstract class Controller {
+    protected static ConsoleView view = new ConsoleView();
+    protected static SuitService service = new SuitService();
 
-    private void selectAction() {
+    protected  <E, T>E getUserChoice(E[] elements, T message){
         while (true) {
-            int choice = service.inputNumber(view.SELECT_AN_ACTION , view.getScanner());
-            switch (choice) {
-                case 1: {
-                    service.resultHandler(Suit.values());
-                    break;
-                }
-                case 2: {
-                    service.resultHandler(Suit.valueOf(service.getEnumNameFromUser()));
-                    break;
-                }
-                case 3: {
-                    service.resultHandler(Suit.getEnumOrdinalByName(service.getEnumNameFromUser()));
-                    break;
-                }
-                case 4: {
-                    service.resultHandler(Suit.getEnumNameByOrdinal(service.getEnumOrdinalFromUser()));
-                    break;
-                }
-                case 5: {
-                    service.compareEnum();
-                    break;
-                }
-                case 0: {
-                    return;
-                }
-                default: {
-                    view.printMessage(view.WRONG_INPUT);
-                    view.getScanner().next();
-                }
+            view.showMessage(message);
+            if (view.getRequestFromUser().hasNextInt()) {
+                return elements[view.getRequestFromUser().nextInt() - 1];
+            }
+            else {
+                view.showMessage(view.WRONG_INPUT);
+                view.getRequestFromUser().next();
             }
         }
+    }
+
+    protected <T>void resultHandler(T result) {
+        if (result != null && !result.equals(""))
+            view.showMessage(result);
+        else
+            view.showMessage(view.NO_RESULT);
+    }
+
+    protected <T>void resultHandler(T[] result) {
+        if (result != null && result.length > 0)
+            view.showMessage(Arrays.toString(result));
+        else
+            view.showMessage(view.NO_RESULT);
+    }
+
+    protected <E>void resultHandler(List<E> result) {
+        if (result.size() > 0)
+            view.showList(result);
+        else
+            view.showMessage(view.NO_RESULT);
     }
 }

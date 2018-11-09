@@ -1,71 +1,47 @@
 package com.epam.task3.task3_2.controller;
 
 import com.epam.task3.task3_2.model.Store;
-import com.epam.task3.task3_2.service.Service;
-import com.epam.task3.task3_2.view.StoreView;
+import com.epam.task3.task3_2.service.StoreService;
+import com.epam.task3.task3_2.view.ConsoleView;
+import java.util.Arrays;
+import java.util.List;
 
-public class Controller {
-    private Store model = new Store();
-    private StoreView view = new StoreView();
-    private Service service = new Service(model, view);
+public abstract class Controller {
+    protected static ConsoleView view = new ConsoleView();
+    protected static Store model = new Store();
+    protected static StoreService service = new StoreService();
 
-    public void run(){
-        view.printMessage(view.ENTER_STORE_NAME);
-        model.setStoreName(view.getScanner().nextLine());
-        selectAction();
-    }
-
-    private void selectAction() {
+    protected  <E, T>E getUserChoice(E[] elements, T message){
         while (true) {
-            int choice = service.inputNumber(view.SELECT_AN_ACTION , view.getScanner());
-            switch (choice) {
-                case 1: {
-                    service.resultHandler(model.getStoreName());
-                    break;
-                }
-                case 2: {
-                    service.resultHandler(model.getListDepartments());
-                    break;
-                }
-                case 3: {
-                    service.changeStoreName();
-                    break;
-                }
-                case 4: {
-                    service.createDepartments();
-                    break;
-                }
-                case 5: {
-                    service.deleteDepartmentByName();
-                    break;
-                }
-                case 6: {
-                    service.deliveryProductsInDepartment();
-                    break;
-                }
-                case 7: {
-                    service.sortByDepartmentName(model.getListDepartments());
-                    service.resultHandler(model.getListDepartments());
-                    break;
-                }
-                case 8: {
-                    service.sortByTypeOfProducts(model.getListDepartments());
-                    service.resultHandler(model.getListDepartments());
-                    break;
-                }
-                case 9: {
-                    service.sortByService(model.getListDepartments());
-                    service.resultHandler(model.getListDepartments());
-                    break;
-                }
-                case 0: {
-                    return;
-                }
-                default: {
-                    view.printMessage(view.WRONG_INPUT);
-                    view.getScanner().next();
-                }
+            view.showMessage(message);
+            if (view.getRequestFromUser().hasNextInt()) {
+                return elements[view.getRequestFromUser().nextInt() - 1];
+            }
+            else {
+                view.showMessage(view.WRONG_INPUT);
+                view.getRequestFromUser().next();
             }
         }
+    }
+
+    protected <T>void resultHandler(T result) {
+        if (result != null && !result.equals(""))
+            view.showMessage(result);
+        else
+            view.showMessage(view.NO_RESULT);
+    }
+
+    protected <T>void resultHandler(T[] result) {
+        if (result != null && result.length > 0)
+            view.showMessage(Arrays.toString(result));
+        else
+            view.showMessage(view.NO_RESULT);
+    }
+
+    protected <E>void resultHandler(List<E> result) {
+        if (result.size() > 0)
+            view.showList(result);
+        else
+            view.showMessage(view.NO_RESULT);
     }
 }
