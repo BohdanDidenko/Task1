@@ -88,4 +88,24 @@ public class Rectangle extends Shape {
                 "width=" + width + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rectangle)) return false;
+        if (!super.equals(o)) return false;
+
+        Rectangle rectangle = (Rectangle) o;
+
+        if (getWidth() != rectangle.getWidth()) return false;
+        return getHeight() == rectangle.getHeight();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + getWidth();
+        result = 31 * result + getHeight();
+        return result;
+    }
 }

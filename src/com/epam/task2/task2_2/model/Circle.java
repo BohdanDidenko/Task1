@@ -68,4 +68,22 @@ public class Circle extends Shape {
                 "Area=" + radius + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Circle)) return false;
+        if (!super.equals(o)) return false;
+
+        Circle circle = (Circle) o;
+
+        return getRadius() == circle.getRadius();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + getRadius();
+        return result;
+    }
 }

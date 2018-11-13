@@ -88,4 +88,24 @@ public class Triangle extends Shape {
                 "width=" + width + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Triangle)) return false;
+        if (!super.equals(o)) return false;
+
+        Triangle triangle = (Triangle) o;
+
+        if (getWidth() != triangle.getWidth()) return false;
+        return getHeight() == triangle.getHeight();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + getWidth();
+        result = 31 * result + getHeight();
+        return result;
+    }
 }

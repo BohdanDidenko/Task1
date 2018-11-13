@@ -8,47 +8,38 @@ import com.epam.task2.task2_2.service.ShapesService;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
+@RunWith(Parameterized.class)
 public class ShapeTest {
     private static ShapesService service;
+    private static String totalShapesArea;
+    private static Shape[] sortShapesByIncreasingAreaOfFigures;
+    private static Shape[] sortShapesByColorOfFigures;
+
     @Parameterized.Parameter
     public Class<Circle> arrayType;
-//    @Parameterized.Parameter(1)
-//    public Class<Rectangle> rectangleType = Rectangle.class;
-//    @Parameterized.Parameter(2)
-//    public Class<Triangle> triangleType = Triangle.class;
     @Parameterized.Parameter(1)
-    public String[] shapeArea;
-    @Parameterized.Parameter(2)
-    public String totalShapesArea = "1203,21";
-    public Shape[] sortShapesByIncreasingAreaOfFigures = DataSourceForShapes.getSortShapesByIncreasingAreaOfFigures();
-    public Shape[] sortShapesByColorOfFigures = DataSourceForShapes.getSortShapesByColorOfFigures();
-
-
-//    @Parameterized.Parameter(3)
-//    public String totalShapesArea;
-//    @Parameterized.Parameter(4)
-//    public String totalCirclesArea;
-//    @Parameterized.Parameter(5)
-//    public String totalRectanglesArea;
-//    @Parameterized.Parameter(6)
-//    public String totalTrianglesArea;
+    public String shapeArea;
 
     @BeforeClass
     public static void init() {
         service = new ShapesService();
-        service.setShapes(DataSourceForShapes.getShapes());
+        service.setShapes(DataSourceForShapesTest.getShapes());
+        totalShapesArea = "1090,11";
+        sortShapesByIncreasingAreaOfFigures = DataSourceForShapesTest.getSortShapesByIncreasingAreaOfFigures();
+        sortShapesByColorOfFigures = DataSourceForShapesTest.getSortShapesByColorOfFigures();
     }
 
     @Parameterized.Parameters
     public static Collection data() {
         return Arrays.asList(new Object[][]{
-                {Circle.class, "892,19"},
-                {Rectangle.class, "146,00"},
-                {Triangle.class, "173,50"}
+                {Circle.class, "779,11"},
+                {Rectangle.class, "138,00"},
+                {Triangle.class, "173,00"}
         });
     }
 
@@ -65,7 +56,7 @@ public class ShapeTest {
     @Test
     public void testSortByIncreasingAreaOfFigures(){
         service.sortByIncreasingAreaOfFigures();
-        Assert.assertEquals(sortShapesByIncreasingAreaOfFigures, service.getShapes());
+        Assert.assertArrayEquals(sortShapesByIncreasingAreaOfFigures, service.getShapes());
     }
 
     @Test

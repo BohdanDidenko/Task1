@@ -5,7 +5,7 @@ import com.epam.project1.model.warrior.Knight;
 import java.io.*;
 
 public class KnightDao implements Dao {
-    private String path = "src\\com\\epam\\project1\\resource\\knight.ser";
+    private String path = "src\\com\\epam\\project1\\resource\\shapesArray.ser";
 
     @Override
     public Knight loadKnight() throws IOException, ClassNotFoundException {

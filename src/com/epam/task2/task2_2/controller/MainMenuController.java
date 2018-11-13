@@ -13,7 +13,6 @@ public class MainMenuController extends Controller {
      * и исполняющий метод selectAction, который отвечает за взаимодействие с пользователем
      */
     public void run(){
-        service.setShapes(DataSource.getShapes());
         mainMenu();
     }
 
@@ -30,6 +29,7 @@ public class MainMenuController extends Controller {
     protected void mainMenu() {
         while (true) {
             try {
+                service.setShapes(dao.loadShapes());
                 MainMenu choice = getUserChoice(MainMenu.values(), view.MAIN_MENU);
                 switch (choice) {
                     case CALCULATE_TOTAL_AREA_OF_ALL_FIGURES: {
@@ -59,6 +59,7 @@ public class MainMenuController extends Controller {
                         break;
                     }
                     case EXIT: {
+                        dao.saveShapes(service.getShapes());
                         return;
                     }
                 }

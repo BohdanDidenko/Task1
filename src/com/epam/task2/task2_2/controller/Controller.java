@@ -1,5 +1,7 @@
 package com.epam.task2.task2_2.controller;
 
+import com.epam.task2.task2_2.dao.Dao;
+import com.epam.task2.task2_2.dao.ShapesDao;
 import com.epam.task2.task2_2.model.Circle;
 import com.epam.task2.task2_2.model.Rectangle;
 import com.epam.task2.task2_2.model.Triangle;
@@ -13,6 +15,7 @@ public abstract class Controller {
     protected static Circle modelCircle = new Circle();
     protected static Triangle modelTriangle = new Triangle();
     protected static Rectangle modelRectangle= new Rectangle();
+    protected static Dao dao = new ShapesDao();
 
     protected  <E, T>E getUserChoice(E[] elements, T message){
         while (true) {

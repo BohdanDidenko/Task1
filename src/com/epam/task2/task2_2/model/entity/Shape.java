@@ -1,12 +1,13 @@
 package com.epam.task2.task2_2.model.entity;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
 
 /**
  * Класс описывающий строение фигуры
  */
 
-public abstract class Shape implements Drawable{
+public abstract class Shape implements Drawable, Serializable{
 
     /**
      * Поле хранящее значение цвета фигуры
@@ -75,5 +76,20 @@ public abstract class Shape implements Drawable{
         return this.getClass().getSimpleName() + "{" +
                 "shapeColor='" + shapeColor + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Shape)) return false;
+
+        Shape shape = (Shape) o;
+
+        return getShapeColor() != null ? getShapeColor().equals(shape.getShapeColor()) : shape.getShapeColor() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return getShapeColor() != null ? getShapeColor().hashCode() : 0;
     }
 }

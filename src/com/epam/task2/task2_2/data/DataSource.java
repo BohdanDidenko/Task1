@@ -5,6 +5,11 @@ import com.epam.task2.task2_2.model.Rectangle;
 import com.epam.task2.task2_2.model.entity.Shape;
 import com.epam.task2.task2_2.model.Triangle;
 
+//import com.epam.task6.model.Circle;
+//import com.epam.task6.model.Rectangle;
+//import com.epam.task6.model.entity.Shape;
+//import com.epam.task6.model.Triangle;
+
 /**
  * Класс предоставляет массив объектов типа Shape
  */
