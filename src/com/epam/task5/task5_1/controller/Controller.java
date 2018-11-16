@@ -1,14 +1,16 @@
-package com.epam.project2.controller;
+package com.epam.task5.task5_1.controller;
 
-import com.epam.project2.model.Word;
-import com.epam.project2.service.FileService;
-import com.epam.project2.service.Service;
-import com.epam.project2.view.ConsoleView;
+import com.epam.task5.task5_1.model.CuratorJournal;
+import com.epam.task5.task5_1.service.JournalService;
+import com.epam.task5.task5_1.service.Service;
+import com.epam.task5.task5_1.view.ConsoleView;
+
 import java.util.List;
 
 public abstract class Controller {
     protected static ConsoleView view = new ConsoleView();
-    protected static Service service = new FileService();
+    protected static Service service = new JournalService();
+    protected static CuratorJournal model = new CuratorJournal();
 
     protected  <E, T>E getUserChoice(E[] elements, T message){
         while (true) {
