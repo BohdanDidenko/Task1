@@ -1,5 +1,7 @@
 package com.epam.task9.controller;
 
+import com.epam.task9.data.DataSource;
+
 public class LoadController extends Controller {
     private MainMenuController mainMenuController = new MainMenuController();
 
@@ -21,6 +23,7 @@ public class LoadController extends Controller {
                         view.showMessage(resourceManager.getString("LOAD_FILE"));
                         dao.setPath(view.getRequestFromUser().nextLine());
                         service.setShapes(dao.loadShapes());
+//                        service.setShapes(DataSource.getShapes());
                         mainMenuController.mainMenu();
                         break;
                     }

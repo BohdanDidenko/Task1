@@ -3,8 +3,6 @@ package com.epam.task9.controller;
 import java.util.Locale;
 
 public class ChangeLanguageController extends Controller {
-    private MainMenuController mainMenuController = new MainMenuController();
-
     private enum ChangeLanguageMenu{
         ENGLISH,
         RUSSIAN,
@@ -16,18 +14,18 @@ public class ChangeLanguageController extends Controller {
         view.getRequestFromUser().nextLine();
         switch (choice) {
             case ENGLISH: {
-                resourceManager.changeResource(Locale.ENGLISH);
-                mainMenuController.mainMenu();
+                resourceManager.changeResource(new Locale("en", "GB"));
+                return;
             }
             case RUSSIAN:{
                 resourceManager.changeResource(new Locale("ru", "RU"));
-                mainMenuController.mainMenu();
+                return;
             }
             case UKRAINE: {
                 resourceManager.changeResource(new Locale("uk", "UA"));
-                mainMenuController.mainMenu();
+                return;
             }
-            default: mainMenuController.mainMenu();
+            default: return;
         }
     }
 }

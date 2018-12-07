@@ -27,7 +27,7 @@ public class MainMenuController extends Controller {
     protected void mainMenu() {
         while (true) {
             try {
-                MainMenu choice = getUserChoice(MainMenu.values(), view.MAIN_MENU);
+                MainMenu choice = getUserChoice(MainMenu.values(), resourceManager.getString("MAIN_MENU"));
                 view.getRequestFromUser().nextLine();
                 switch (choice) {
                     case CALCULATE_TOTAL_AREA_OF_ALL_FIGURES: {
