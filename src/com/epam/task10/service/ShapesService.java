@@ -2,20 +2,25 @@ package com.epam.task10.service;
 
 import com.epam.task10.dao.Dao;
 import com.epam.task10.dao.ShapesDao;
-import com.epam.task10.model.data.DataSource;
+import com.epam.task10.exception.UnExistItemMenu;
 import com.epam.task10.model.entity.Shape;
-
-
+import com.epam.task10.util.ResourceManager;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Locale;
 
 public class ShapesService implements Service {
 
     private Shape[] shapes;
     private Dao dao = new ShapesDao();
+    private ResourceManager resourceManager = ResourceManager.INSTANCE;
     private Comparator<Shape> shapeColorComparator = (o1, o2) -> o1.getShapeColor().compareTo(o2.getShapeColor());
     private Comparator<Shape> shapeAreaComparator = (o1, o2) -> (int) (o1.calcArea() - o2.calcArea());
+
+    public ShapesService() {
+        shapes = dao.loadShapes();
+    }
 
     @Override
     public Shape[] getShapes() { return shapes; }
@@ -53,8 +58,16 @@ public class ShapesService implements Service {
     }
 
     @Override
-    public void loadShapes() throws IOException, ClassNotFoundException {
-        shapes = dao.loadShapes();
+    public void changeLanguare(int choise) throws UnExistItemMenu {
+        resourceManager.changeLocale(defineLocale(choise));
+    }
+
+    private Locale defineLocale(int number) throws UnExistItemMenu {
+        Language[] languares = Language.values();
+        if (number <= 0 || number > languares.length) {
+            throw new UnExistItemMenu(resourceManager.getMessage("WRONG_INPUT"));
+        }
+        return languares[number - 1].getLocale();
     }
 
     @Override

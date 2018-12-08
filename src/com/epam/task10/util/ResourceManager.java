@@ -9,7 +9,7 @@ public enum ResourceManager {
     private final String RESOURCE_NAME = "com.epam.task10.resource.location.text";
 
     ResourceManager(){
-        resourceBundle = ResourceBundle.getBundle(RESOURCE_NAME, new Locale("en", "UK"));
+        resourceBundle = ResourceBundle.getBundle(RESOURCE_NAME, new Locale("en", "GB"));
     }
 
     public void changeLocale(Locale locale){

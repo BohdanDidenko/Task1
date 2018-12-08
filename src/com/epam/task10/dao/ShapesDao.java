@@ -1,6 +1,5 @@
 package com.epam.task10.dao;
 
-import com.epam.task10.dao.Dao;
 import com.epam.task10.model.entity.Shape;
 import java.io.*;
 
@@ -18,10 +17,13 @@ public class ShapesDao implements Dao {
     }
 
     @Override
-    public Shape[] loadShapes() throws IOException, ClassNotFoundException {
+    public Shape[] loadShapes() {
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(path))) {
             return (Shape[]) inputStream.readObject();
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
         }
+        return new Shape[0];
     }
 
     @Override

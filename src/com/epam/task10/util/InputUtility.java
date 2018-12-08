@@ -15,9 +15,4 @@ public class InputUtility {
         }
         return scanner.nextInt();
     }
-
-    public static String inputString(View view, ResourceManager manager) {
-        view.showMessage(manager.getMessage("INPUT_STRING_DATA"));
-        return scanner.next();
-    }
 }

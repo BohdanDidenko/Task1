@@ -6,6 +6,6 @@ import java.io.IOException;
 public interface Dao {
     String getPath();
     void setPath(String path);
-    Shape[] loadShapes()  throws IOException, ClassNotFoundException;
+    Shape[] loadShapes();
     void saveShapes(Shape[] shape)  throws IOException;
 }
