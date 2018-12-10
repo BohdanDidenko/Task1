@@ -1,9 +1,9 @@
-package com.epam.task10.model.data;
+package com.epam.task11.task11_2.model.data;
 
-import com.epam.task10.model.Circle;
-import com.epam.task10.model.Rectangle;
-import com.epam.task10.model.entity.Shape;
-import com.epam.task10.model.Triangle;
+import com.epam.task11.task11_2.model.Circle;
+import com.epam.task11.task11_2.model.Rectangle;
+import com.epam.task11.task11_2.model.entity.Shape;
+import com.epam.task11.task11_2.model.Triangle;
 
 public class DataSource {
 
