@@ -117,6 +117,8 @@ public class ShapesDao implements Dao {
     private void saveCircle(Circle circle, PreparedStatement statement) throws SQLException {
         statement.setString(1, circle.getClass().getSimpleName());
         statement.setString(2, circle.getShapeColor());
+        statement.setString(3, null);
+        statement.setString(4, null);
         statement.setString(5, String.valueOf(circle.getRadius()));
         statement.executeUpdate();
     }
@@ -126,6 +128,7 @@ public class ShapesDao implements Dao {
         statement.setString(2, rectangle.getShapeColor());
         statement.setString(3, String.valueOf(rectangle.getWidth()));
         statement.setString(4, String.valueOf(rectangle.getHeight()));
+        statement.setString(5, null);
         statement.executeUpdate();
     }
 
@@ -134,6 +137,7 @@ public class ShapesDao implements Dao {
         statement.setString(2, triangle.getShapeColor());
         statement.setString(3, String.valueOf(triangle.getWidth()));
         statement.setString(4, String.valueOf(triangle.getHeight()));
+        statement.setString(5, null);
         statement.executeUpdate();
     }
 
