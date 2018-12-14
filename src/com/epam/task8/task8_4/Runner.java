@@ -31,7 +31,7 @@ public class Runner extends RecursiveTask<Long> {
             int mid = (from + to) / 2;
             Runner firstRunner = new Runner(array, from, mid);
 //            firstRunner.fork();
-            Runner secondRunner = new Runner(array, mid + 1, to);
+            Runner secondRunner = new Runner(array, mid, to);
             invokeAll(firstRunner, secondRunner);
 //            long secondResult = secondRunner.compute();
             return firstRunner.join() + secondRunner.join();
@@ -46,6 +46,12 @@ public class Runner extends RecursiveTask<Long> {
         ForkJoinPool pool = new ForkJoinPool(NUM_THREADS);
         pool.invoke(runner);
         System.out.println("Result = " + runner.join());
+
+//        long count = 0;
+//        for (int i = 0; i < arrayForCount.length; i++) {
+//            count += arrayForCount[i];
+//        }
+//        System.out.println(count);
     }
 
     public static long[] initArrayRandomNumber(long[] array, int minBorder, int maxBorder){
